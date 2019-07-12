@@ -6,25 +6,26 @@
 
    - https://dotnet.microsoft.com/download
 
-2. ## VSCode
-
-   - https://code.visualstudio.com/download
-
-3. ## NodeJS
+2. ## NodeJS
 
    - https://nodejs.org/en/
 
-4. ## GIT
+3. ## GIT
 
    - https://git-scm.com/downloads
 
-5. ## CMDER (windows)
+4. ## CMDER (windows)
 
    - https://cmder.net/
 
-6. ## Postman
+5. ## Postman
 
    - https://www.getpostman.com/downloads/
 
-7. ## Insomnia
+6. ## Insomnia
+
    - https://insomnia.rest/
+
+7. ## VSCode
+
+   - https://code.visualstudio.com/download
