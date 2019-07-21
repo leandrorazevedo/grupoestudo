@@ -1,4 +1,4 @@
-# Sintaxe Emmet para HTML:
+# Sintaxe Emmet para HTML: (_Resumo_)
 
 ## >
 
@@ -25,7 +25,7 @@ Multiplicação. O número de vezes que o elemento será repetido. Tente: **ul>l
 
 Enumerar. Enumera, dentro de uma repetição. Tente **ul>li{item numero \$}\*6**
 
-## \#
+## \
 
 ID da tag.
 
