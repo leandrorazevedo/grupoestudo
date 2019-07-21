@@ -2,30 +2,16 @@
 
 ## Instalação / Downloads
 
-1. ## DotNet Core SDK
+1. ## [DotNet Core SDK](https://dotnet.microsoft.com/download)
 
-   - https://dotnet.microsoft.com/download
+2) ## [NodeJS](https://nodejs.org/en/)
 
-2. ## NodeJS
+3) ## [GIT](https://git-scm.com/downloads)
 
-   - https://nodejs.org/en/
+4. ## [CMDER (windows)](https://cmder.net/)
 
-3. ## GIT
+5) ## [Postman](https://www.getpostman.com/downloads/)
 
-   - https://git-scm.com/downloads
+6. ## [Insomnia](https://insomnia.rest/)
 
-4. ## CMDER (windows)
-
-   - https://cmder.net/
-
-5. ## Postman
-
-   - https://www.getpostman.com/downloads/
-
-6. ## Insomnia
-
-   - https://insomnia.rest/
-
-7. ## VSCode
-
-   - https://code.visualstudio.com/download
+7) ## [VSCode](https://code.visualstudio.com/download)
