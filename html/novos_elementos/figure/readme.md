@@ -6,10 +6,8 @@ Exemplo de código:
 
 ```html
 <figure>
-  <figure>
-    <img src="../elementos_semanticos.jpg" alt="disposição dos elementos semânticos no HTML5" />
-    <figcaption>Exemplo da disposição de elementos semânticos</figcaption>
-  </figure>
+  <img src="../elementos_semanticos.jpg" alt="disposição dos elementos semânticos no HTML5" />
+  <figcaption>Exemplo da disposição de elementos semânticos</figcaption>
 </figure>
 ```
 

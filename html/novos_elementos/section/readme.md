@@ -1,5 +1,7 @@
 # < section >
 
+Conforme documentação do W3C : "Uma **\<section\>** é um agrupamento temático de conteúdo, normalmente com um cabeçalho".
+
 Este elemento demarca um segmento ou seção da página. Geralmente contém um título seguido do conteúdo relacionado a este tópico.
 
 Exemplo de Código :
