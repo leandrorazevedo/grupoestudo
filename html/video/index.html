@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+    <body>
+
+        <video id="vdUrso" width="300" height="200" controls poster="./siac.jpg">
+            <source src="./movie.mp4" type="video/mp4" />
+            <source src="./mov_bbb.ogv" type="video/ogg" />
+            O browser não suporta a tag video.
+        </video>
+
+        <button id="btnPlay">play</button>
+        <button id="btnPause">pause</button>
+
+        <script>
+            const meuVideo = document.getElementById('vdUrso');
+            const btnPlay = document.getElementById('btnPlay');
+            const btnPause = document.getElementById('btnPause');
+
+            btnPlay.onclick = function (event) {
+                meuVideo.play();
+            }
+
+            btnPause.addEventListener('click', event => {
+                meuVideo.pause();
+            });
+
+        </script>
+
+
+    </body>
+
+</html>

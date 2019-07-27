@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Document</title>
+        <style>
+            body {
+                background-color: lightsteelblue;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+
+            h1 {
+                font-size: 3rem;
+                color: #fff;
+                font-family: "Berkshire Swash", cursive;
+                text-align: center;
+            }
+
+            h2 {
+                font-size: 1.2rem;
+                font-family: sans-serif;
+                text-align: center;
+            }
+
+            details {
+                margin-bottom: 20px;
+                width: 100%;
+                font-family: sans-serif;
+            }
+
+            details p {
+                padding: 20px;
+            }
+
+            summary {
+                padding: 20px;
+                background-color: #9fb6ce;
+                border: 1px solid #9fb6ce;
+                outline: none;
+            }
+
+            summary:hover,
+            summary:focus {
+                border: 1px solid lightslategray;
+            }
+
+            details[open] summary {
+                background-color: lightslategray;
+                border: 1px solid lightslategray;
+            }
+
+            details[open] {
+                background: #fff;
+            }
+
+            section {
+                max-width: 80%;
+                width: 100%;
+            }
+        </style>
+    </head>
+
+    <body>
+        <h1>Detail and Summary</h1>
+
+        <section>
+            <details>
+                <summary>Primeiro Tópico</summary>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate distinctio aspernatur eveniet maxime illum expedita aliquam?
+                    Aspernatur modi tempore deleniti debitis, ullam vel consectetur delectus, esse illo cum sit officia.
+                </p>
+            </details>
+
+            <details>
+                <summary>Segundo Tópico</summary>
+                <p>
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempora quod illo facilis est sint, dicta nostrum vero sit vel beatae
+                    praesentium voluptatum architecto excepturi deserunt error voluptas consequuntur! Labore, veniam.
+                </p>
+            </details>
+        </section>
+
+    </body>
+
+</html>

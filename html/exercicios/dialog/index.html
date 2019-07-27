@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Dialog</title>
+
+        <style>
+            .overlay {
+                position: fixed;
+                width: 100%;
+                height: 100%;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background-color: rgba(0, 0, 0, 0.5);
+                z-index: 2;
+            }
+
+            dialog {
+                z-index: 3;
+            }
+        </style>
+    </head>
+
+    <body id="body">
+        <div id="container">
+        </div>
+        <input type="button" value="Open Dialog" id="btnOpenDialog">
+
+        <dialog id="MyDialog">
+
+            <header style="display: inline-block">
+                <h1>Titulo da minha Dialog</h1>
+                <button id="btnClose">Fechar</button>
+            </header>
+            <main>
+                <p>conteúdo principal da minha Dialog</p>
+            </main>
+            <footer>
+                <span> Rodapé da Diaolog </span>
+            </footer>
+        </dialog>
+
+        <script>
+            const btnOpenDialog = document.getElementById('btnOpenDialog');
+            const dialog = document.getElementById('MyDialog');
+            const container = document.getElementById('container');
+
+            btnOpenDialog.onclick = function (event) {
+                container.classList.toggle('overlay');
+                dialog.setAttribute('open', 'true');
+            };
+
+            const btnClose = document.getElementById('btnClose');
+            btnClose.onclick = function (event) {
+                container.classList.toggle('overlay');
+                dialog.removeAttribute('open');
+            };
+        </script>
+    </body>
+
+</html>

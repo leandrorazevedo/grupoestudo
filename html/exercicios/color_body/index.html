@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Document</title>
+    </head>
+
+    <body>
+
+        <h1>Color Picker</h1>
+
+        <label for="colorPicker">Selecione uma cor:</label>
+        <input type="color" value="#e0ffee" id="colorPicker">
+        <span id="colorCode"></span>
+
+        <script>
+            const body = document.querySelector('body');
+            const input = document.getElementById('colorPicker');
+            const colorCode = document.getElementById('colorCode');
+
+            setColor();
+
+            input.addEventListener('input', setColor);
+
+            function setColor() {
+                body.style.backgroundColor = input.value;
+                colorCode.innerHTML = input.value;
+            }
+
+
+
+        </script>
+
+    </body>
+
+</html>

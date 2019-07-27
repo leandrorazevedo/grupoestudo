@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Dropdown List</title>
+    </head>
+
+    <body>
+        <input list="listPokemon" id="inpPokemon" placeholder="selecione um pokemon..." />
+
+        <datalist id="listPokemon">
+        </datalist>
+
+        <input type="button" value="Buscar Pokemon" onclick="getPokemon()">
+
+        <script>
+
+            function getPokemon() {
+
+                const datalist = document.getElementById('listPokemon');
+
+
+                fetch('https://pokeapi.co/api/v2/pokemon')
+                    .then(value => value.json())
+                    .then(valueJson => {
+                        valueJson.results.forEach(row => {
+                            const opt = document.createElement('option');
+                            opt.setAttribute('value', row.url);
+                            opt.innerText = row.name;
+                            datalist.appendChild(opt);
+                        });
+                        document.getElementById('inpPokemon').focus();
+                    })
+                    .catch(err => {
+                        console.log('erro : ', err);
+                        alert('erro ao buscar a lista de Pokemon!');
+                    })
+            }
+
+        </script>
+
+    </body>
+
+</html>
