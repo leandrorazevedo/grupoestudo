@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Document</title>
+
+        <style>
+            body {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                padding: 40px;
+            }
+
+            h1 {
+                font-size: 3rem;
+                color: mediumaquamarine;
+                font-family: "Berkshire Swash", cursive;
+                text-align: center;
+            }
+
+            .edit {
+                width: 80%;
+                height: 100%;
+                min-height: 51vh;
+                outline: none;
+                color: #333;
+                font-family: "Berkshire Swash", cursive;
+                font-size: 1.2rem;
+                line-height: 1.56;
+                margin: 30px;
+                padding: 30px 50px;
+                position: relative;
+                border: 1px solid #DFE8EC;
+                background: -webkit-linear-gradient(top, #DFE8EC 0%, white 8%) 0 56px;
+                background: -moz-linear-gradient(top, #DFE8EC 0%, white 8%) 0 56px;
+                background: linear-gradient(top, #DFE8EC 0%, white 8%) 0 56px;
+                -webkit-background-size: 100% 30px;
+                -moz-background-size: 100% 30px;
+                background-size: 100% 30px;
+            }
+
+            .edit:before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 30px;
+                width: 1px;
+                height: 100%;
+                border: 1px solid indianred;
+                opacity: 0.5;
+            }
+        </style>
+    </head>
+
+    <body>
+        <h1>Atributo <i>contenteditable</i>. </h1>
+        <div class="edit" contenteditable title="essa div pode ser editada !">
+            Sou uma DIV editável... clique e edit-me!
+        </div>
+
+    </body>
+
+</html>

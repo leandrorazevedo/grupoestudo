@@ -2,7 +2,9 @@
 
 O elemento `audio` é utilizado para embutir conteúdo de som em um documento HTML ou XHTML.O elemento `audio` foi adicionado como parte do HTML5.
 
-## Atributos
+> _Para uma lista completa de todos os eventos e propriedades [clique aqui .](https://www.w3schools.com/tags/ref_av_dom.asp)_
+
+## Atributos / Propriedades
 
 > **autoplay**
 

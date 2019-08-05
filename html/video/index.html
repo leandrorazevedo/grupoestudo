@@ -3,12 +3,17 @@
 
     <body>
 
-        <video id="vdUrso" width="300" height="200" controls poster="./siac.jpg">
+        <video id="vdUrso" width="300" height="200" controls poster="./siac.jpg" loop>
             <source src="./movie.mp4" type="video/mp4" />
             <source src="./mov_bbb.ogv" type="video/ogg" />
             O browser não suporta a tag video.
         </video>
 
+        <br>
+
+        <progress id="progress" value="0" max="0"> </progress>
+
+        <br>
         <button id="btnPlay">play</button>
         <button id="btnPause">pause</button>
 
@@ -16,6 +21,7 @@
             const meuVideo = document.getElementById('vdUrso');
             const btnPlay = document.getElementById('btnPlay');
             const btnPause = document.getElementById('btnPause');
+            const progress = document.getElementById('progress');
 
             btnPlay.onclick = function (event) {
                 meuVideo.play();
@@ -24,6 +30,12 @@
             btnPause.addEventListener('click', event => {
                 meuVideo.pause();
             });
+
+            meuVideo.ontimeupdate = () => {
+                progress.setAttribute('max', meuVideo.duration);
+                // progress.value = meuVideo.currentTime;
+                progress.setAttribute('value', meuVideo.currentTime);
+            }
 
         </script>
 

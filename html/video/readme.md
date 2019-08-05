@@ -2,7 +2,9 @@
 
 O elemento HTML `<video>` é utilizado para incorporar conteúdo de vídeo em um documento HTML ou XHTML.
 
-## Atributos
+> _Para uma lista completa de todos os eventos e propriedades [clique aqui .](https://www.w3schools.com/tags/ref_av_dom.asp)_
+
+## Atributos / Propriedades
 
 > **autoplay**
 
