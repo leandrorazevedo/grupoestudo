@@ -146,3 +146,130 @@ resultado :
 </p>
 
 ## \<em\> : Emphasis
+
+O elemento HTML \<em\> marca o texto que tem ênfase. O elemento \<em\> pode ser aninhado, com cada nível de aninhamento indicando um grau maior de ênfase.
+
+### Notas de Uso
+
+Este elemento geralmente é mostrado no tipo itálico. Contudo, não deve ser usado simplesmente para aplicar estilo itálico; use o estilo CSS para esse propósito. Use o elemento \<cite\> para marcar o título de um trabalho (book, play, song, etc.); também é geralmente estilizado com tipo itálico, mas possui significado diferente. Use o elemento \<strong\> para marcar o texto que tem importância maior do que o texto que está em volta.
+
+exemplo:
+
+O elemento \<em\> é frequentemente usado para indicar um contraste implícito ou explícito.
+
+```html
+<p>Em HTML 5, o que anteriormente era chamado de conteúdo <em>block-level</em> agora é chamado de conteúdo <em>flow</em> .</p>
+```
+
+Resultado:
+
+<p>
+  Em HTML 5, o que anteriormente era chamado de conteúdo  <em>block-level</em> agora é chamado de conteúdo  <em>flow</em> .
+</p>
+
+## blockquote
+
+O Elemento HTML \<blockquote\> (ou Elemento HTML de citação de bloco) indica que o texto incluído é uma longa citação. Normalmente, este é processado visualmente pelo recuo. A URL para a fonte da citação pode ser dada usando o atributo **cite**, enquanto uma representação de texto da fonte pode ser dada usando o \<cite\> elemento.
+
+### Atributos
+
+> cite
+
+O valor deste atributo é uma URL que designa uma fonte ou mensagem para a informação citada. A intenção deste atributo é indicar a informação e explicar o contexto ou referência para a citação.
+
+exemplo :
+
+```html
+<blockquote cite="http://developer.mozilla.org">
+  <p>Esta é uma citação tirada da Mozilla Developer Center.</p>
+</blockquote>
+```
+
+resultado :
+
+<blockquote cite="http://developer.mozilla.org">
+  <p>Esta é uma citação tirada da
+  Mozilla Developer Center.</p>
+</blockquote>
+
+## \<q\>
+
+O elemento HTML \<q\> indica que o texto dentro da tag é uma pequena citação. Este elemento destina-se a citações curtas que não requerem marcações de parágrafo; para citações maiores use o elemento \<blockquote\>.
+
+> cite
+
+O valor deste atributo é uma URL que designa uma fonte ou mensagem para a informação citada. A intenção deste atributo é indicar a informação e explicar o contexto ou referência para a citação.
+
+exemplo:
+
+```html
+<p>alguem disse <q>bla bla bla</q></p>
+```
+
+resultado :
+
+<p>
+  alguem disse <q>bla bla bla</q>
+<p>
+
+## abbr
+
+O Elemento HTML \<abbr\> (ou Elemento de Abreviação HTML) representa uma abreviação e opcionalmente fornece uma descrição completa para ela. Se presente, o atributo **title** deve conter a descrição completa e apenas ela.
+
+### Atributos
+
+> title
+
+Use o atributo **title** para definir a descrição completa da abreviação. Muitos navegadores exibem a descrição quando passa-se o mouse por cima da abreviação.
+
+exemplo :
+
+```html
+<p>Obama é presidente dos <abbr title="Estados Unidos da América">EUA</abbr></p>
+```
+
+resultado :
+
+<p>Obama é presidente dos <abbr title="Estados Unidos da América">EUA</abbr></p>
+
+## \<dfn\>
+
+O elemento HTML \<dfn\> (ou Elemento Definição HTML) representa uma instância de definição de um termo.
+
+```html
+<p>
+  <dfn id="def-internet">A Internet</dfn> é um sistema global de redes interconectadas que usam o Internet Protocol Suite (TCP/IP) para servir bilhões
+  de usuários no mundo todo.
+</p>
+```
+
+resultado :
+
+<p><dfn id="def-internet">A Internet</dfn> é um sistema global de redes interconectadas que usam o Internet Protocol Suite (TCP/IP) para servir bilhões de usuários no mundo todo.
+</p>
+
+## \<del\>
+
+O elemento HTML \<del\> (ou Elemento HTML de Texto Excluído) representa uma parte do texto que foi excluída de um documento. Este elemento é (não necessariamente) renderizado pelos navegadores com uma linha entre o texto.
+
+exemplo :
+
+```html
+<p><del>Este texto foi alterado.</del></p>
+```
+
+resultado :
+
+<p><del>Este texto foi alterado.</del></p>
+
+## \<ins\>
+
+O elemento HTML \<ins\> (ou HTML de text inserido) representa um intervalo de texto que foi adicionado a um documento.
+
+```html
+<ins>Este texto foi inserido.</ins>
+```
+
+resultado :
+
+<ins>Este texto foi inserido.</ins>
