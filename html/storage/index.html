@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Document</title>
+
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+
+            pre {
+                height: 50vh;
+                overflow-y: scroll;
+                background-color: #cecece;
+            }
+
+            form {
+                margin: 10px 0;
+            }
+        </style>
+    </head>
+
+    <body>
+
+        <form id="frmCadastro">
+            <p>
+                <label for="nome">Nome: </label>
+                <input type="text" name="txtnome" id="nome">
+            </p>
+
+            <p>
+                <label for="email">email : </label>
+                <input type="text" name="txtemail" id="email">
+            </p>
+
+            <input type="button" value="Salvar" id="btnSalvar">
+        </form>
+
+        <pre>
+
+        </pre>
+
+        <script>
+            const inputs = document.querySelectorAll('input');
+            const btnSalvar = document.getElementById('btnSalvar');
+            const form = document.getElementById('frmCadastro');
+
+            let db = [];
+
+            showData();
+
+            function loadDb() {
+                db = JSON.parse(localStorage.getItem('db')) || [];
+            }
+
+            function showData() {
+                loadDb();
+                document.getElementsByTagName('pre')[0].innerHTML = JSON.stringify(db, null, 2);
+            }
+
+            function saveToStorage(event) {
+                // localStorage.setItem(event.srcElement.name, event.srcElement.value);
+            }
+
+            function loadDataFromStorage() {
+                inputs.forEach(element => {
+                    if (localStorage.getItem(element.name)) {
+                        element.value = localStorage.getItem(element.name);
+                    }
+                })
+            }
+
+
+            function saveData() {
+                const data = new FormData(form);
+
+                db.push(Object.fromEntries(data));
+
+                localStorage.setItem('db', JSON.stringify(db));
+
+                showData();
+
+                inputs.forEach(element => {
+                    if (localStorage.getItem(element.name)) {
+                        localStorage.removeItem(element.name);
+                    }
+                });
+
+                document.getElementsByTagName('form')[0].reset();
+            }
+
+            inputs.forEach(element => {
+                element.addEventListener('input', saveToStorage);
+            });
+
+            window.addEventListener('load', loadDataFromStorage);
+
+            btnSalvar.addEventListener('click', saveData);
+
+            window.addEventListener('storage', () => {
+                showData();
+            })
+        </script>
+
+    </body>
+
+</html>
