@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Geolocation</title>
+    </head>
+
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        pre {
+            background: #ececec;
+            margin-bottom: 10px;
+        }
+
+        #myMap {
+            position: relative;
+            width: 100%;
+            height: 75vh;
+        }
+    </style>
+
+    <body onload='loadMapScenario();'>
+
+
+        <pre>
+        </pre>
+
+        <div id='myMap'></div>
+
+        <script type="text/javascript"
+            src="https://www.bing.com/api/maps/mapcontrol?callback=loadMapScenario&amp;key=Ap0AObt84NcDaUThCeWOj52ZqUHv6k4TJhjLibR-DghC-semgoj-0uPbIi8r0E4j"></script>
+
+        <script type='text/javascript'>
+            var map, userPin;
+            function loadMapScenario() {
+                map = new Microsoft.Maps.Map(document.getElementById('myMap'), { zoom: 12 });
+                // Add a pushpin to show the user's location.
+                userPin = new Microsoft.Maps.Pushpin(map.getCenter(), { visible: true, icon: 'https://www.bingmapsportal.com/Content/images/poi_custom.png' });
+                map.entities.push(userPin);
+            }
+
+            function cloneAsObject(obj) {
+                if (obj === null || !(obj instanceof Object)) {
+                    return obj;
+                }
+                var temp = (obj instanceof Array) ? [] : {};
+                for (var key in obj) {
+                    temp[key] = cloneAsObject(obj[key]);
+                }
+                return temp;
+            }
+            if ("geolocation" in navigator) {
+                navigator.geolocation.watchPosition(function (position) {
+                    document.getElementsByTagName('pre')[0].innerHTML = JSON.stringify(cloneAsObject(position.coords), null, 2);
+
+                    var loc = new Microsoft.Maps.Location(position.coords.latitude, position.coords.longitude);
+
+                    // Update the user pushpin.
+                    userPin.setLocation(loc);
+                    userPin.setOptions({ visible: true });
+
+                    // Center the map on the user's location.
+                    map.setView({ center: loc });
+
+                }, null, { enableHighAccuracy: true, maximumAge: 30000, timeout: 10000 });
+            } else {
+                alert("I'm sorry, but geolocation services are not supported by your browser.");
+            }
+        </script>
+    </body>
+
+</html>
