@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Document</title>
+
+        <style>
+            form {
+                display: flex;
+            }
+
+            div {
+                margin: 20px;
+            }
+
+            input:invalid {
+                background-color: rgba(255, 0, 0, 0.25);
+            }
+
+            input:not(input[type=submit]):valid {
+                background-color: rgba(0, 255, 0, 0.25);
+            }
+
+            form:invalid {
+                border: 1px solid red;
+            }
+
+            form:valid {
+                border: 1px solid green;
+            }
+        </style>
+    </head>
+
+    <body>
+
+        <h1>Nosso Primeiro Form</h1>
+
+        <form method="get" id="frmCadastro">
+
+            <div>
+
+                <p>
+
+                    <label for="nome">Nome : </label>
+                    <input type="text" name="nome" id="nome" autofocus required>
+
+                </p>
+
+                <p>
+
+                    <label for="email">email : </label>
+                    <input type="email" name="email_siac" id="email" value="ti@gruposiac.com.br">
+
+                </p>
+
+                <p>
+                    <label for="data_nascimento">Data de Nascimento</label>
+                    <input type="date" name="data_nascimento" placeholder="dd/mm/yyyy">
+                </p>
+
+                <p>
+                    <label for="numeros">Somente Numeros</label>
+                    <input type="number" name="numeros" min="2" max="10">
+                </p>
+
+            </div>
+
+            <div>
+
+                <p>
+
+                    <label for="senha">Senha : </label>
+                    <input type="password" name="senha" id="senha">
+
+                </p>
+
+                <p>
+
+                    <input type="submit" value="Salvar" id="btnSubmit">
+                    <button type="submit" formaction="https://google.com/search" formmethod="post"> Salvar com button</button>
+
+                    <button type="reset"> Limpar </button>
+                    <input type="reset" value="limpar com input">
+
+                </p>
+            </div>
+
+
+        </form>
+
+        <input type="text" name="porfora" id="porfora" pattern="fora|dentro|outros" form="frmCadastro">
+
+        <script>
+            const txtSenha = document.getElementById('senha');
+            const formCadastro = document.getElementById('frmCadastro');
+            const txtEmail = document.getElementById('email');
+            const btnSubmit = document.getElementById('btnSubmit');
+
+            function validateData() {
+                validatePassword();
+                validateEmail();
+            }
+
+            function validatePassword() {
+                txtSenha.setCustomValidity('')
+                if (txtSenha.value.length < 6) {
+                    txtSenha.setCustomValidity('a senha deve ter no mínimo 6 caracteres!')
+                }
+            }
+
+            function validateEmail() {
+                txtEmail.setCustomValidity('');
+                if (!txtEmail.checkValidity()) {
+                    txtEmail.setCustomValidity('email inválido!');
+                }
+            }
+
+            txtEmail.addEventListener('input', validateEmail);
+            txtSenha.addEventListener('input', validatePassword);
+
+            formCadastro.addEventListener('submit', (event) => {
+
+                event.preventDefault();
+
+                validateData();
+
+                if (formCadastro.checkValidity()) {
+                    alert('Tudo certo! Pode enviar para o servidor.')
+                } else {
+                    formCadastro.reportValidity();
+                    alert('tem erro!')
+                }
+
+            })
+
+
+        </script>
+
+    </body>
+
+</html>
