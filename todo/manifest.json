@@ -1,0 +1,23 @@
+{
+    "name": "My TO DO+",
+    "version": "1.0.0",
+    "description": "Simple TO DO Manager",
+    "author": "Grupo de Estudos - Siac",
+    "browser_action": {
+        "default_title": "Simple TO DO Manager",
+        "default_popup": "index.html"
+    },
+    "content_security_policy": "script-src 'self' https://www.gstatic.com https://apis.google.com; object-src 'self'",
+    "permissions": [
+        "storage"
+    ],
+    "icons": {
+        "16": "icons/16.png",
+        "32": "icons/32.png",
+        "48": "icons/48.png",
+        "64": "icons/64.png",
+        "128": "icons/128.png",
+        "256": "icons/256.png"
+    },
+    "manifest_version": 2
+}
