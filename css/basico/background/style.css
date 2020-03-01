@@ -1,0 +1,9 @@
+body {
+  height: 100vh;
+  /* background-image: url('https://pbs.twimg.com/profile_images/1214965523693395969/5i8mPo7b_400x400.png');
+  background-repeat: no-repeat;
+  background-position: right top;
+  background-attachment: scroll; */
+
+  background: #e68787 url('https://pbs.twimg.com/profile_images/1214965523693395969/5i8mPo7b_400x400.png') no-repeat fixed right top;
+}

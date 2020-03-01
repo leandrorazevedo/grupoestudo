@@ -1,1 +1,6 @@
 .vscode
+node_modules
+css/basico/dist
+css/basico/node_modules
+css/basico/.cache
+

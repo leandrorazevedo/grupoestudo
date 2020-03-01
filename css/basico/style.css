@@ -1,0 +1,36 @@
+* {
+  box-sizing: border-box;
+  /* margin: 0; */
+}
+
+#primeiro {
+  color: red;
+}
+
+h1 {
+  color: blue;
+}
+
+footer p {
+  color: green;
+}
+
+.hoverEfect:hover {
+  color: indigo;
+}
+
+h1:nth-child(2) {
+  color: rgba(195, 89, 199, 0.287);
+}
+
+[meuatributo] {
+  color: lightpink;
+}
+
+p.divTeste {
+  color: limegreen;
+}
+
+.corAzul {
+  background-color: #ddd;
+}
