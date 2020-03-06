@@ -11,27 +11,28 @@ body {
 
 header {
   height: 50px;
-  display: flex;
   background-color: #292727;
-  justify-content: space-between;
 }
 
 header .logo {
+  display: inline;
   text-transform: uppercase;
   font-size: 2em;
   font-family: sans-serif;
   margin: 0 15px;
   color: #fff;
-  width: 20%;
   line-height: 50px;
   cursor: pointer;
 }
 
 header .menu {
   display: none;
+  float: right;
 }
 
 header nav {
+  display: inline-block;
+  float: right;
   line-height: 50px;
   margin-right: 10px;
 }
