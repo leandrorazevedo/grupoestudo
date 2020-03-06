@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+
+        <style>
+            html,
+            body {
+                height: 100vh;
+            }
+
+            .container {
+                background-color: gray;
+                font-size: 32px;
+            }
+
+            .element {
+                background-color: khaki;
+                font-size: 2em;
+            }
+
+            @media screen and (max-width: 600px) {
+                .container {
+                    font-size: 16px
+                }
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="container">
+            texto qualquer
+
+            <div class="element">
+                texto dentro da div filha
+            </div>
+        </div>
+    </body>
+
+</html>
